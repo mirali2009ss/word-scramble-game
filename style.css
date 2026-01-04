@@ -150,3 +150,52 @@ button {
     width: 100%;
     filter: drop-shadow(0px 4px 0px var(--shadow-color));
 }
+
+/* --- بخش ریسپانسیو برای موبایل --- */
+@media screen and (max-width: 480px) {
+    body {
+        /* ایجاد فاصله از لبه‌های گوشی */
+        padding: 15px;
+        align-items: center; /* اطمینان از وسط بودن در حالت عمودی */
+    }
+
+    .game-container {
+        width: 100%;
+        padding: 1.5rem;
+        margin: auto; /* کمک به قرارگیری در وسط */
+    }
+
+    .scrambled-word-box {
+        font-size: 24px; /* کوچک‌تر کردن فونت کلمه در موبایل */
+        letter-spacing: 5px;
+        padding: 10px;
+    }
+
+    .input-group {
+        gap: 5px; /* نزدیک‌تر کردن خانه‌های ورودی */
+    }
+
+    .input-group input {
+        width: 38px; /* کوچک‌تر شدن خانه‌ها برای جا شدن در یک خط */
+        height: 38px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .button-group {
+        flex-direction: column; /* در موبایل دکمه‌ها زیر هم قرار بگیرند راحت‌تر است */
+        gap: 10px;
+    }
+}
+
+/* برای تبلت‌ها و گوشی‌های بزرگتر */
+@media screen and (max-height: 700px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 10px;
+    }
+}
