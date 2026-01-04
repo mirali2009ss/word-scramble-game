@@ -1,0 +1,152 @@
+:root {
+    --primary-purple: #7429C6;
+    --light-purple: #C951E7;
+    --dark-bg: #030616;
+    --card-bg: #1e213a; /* رنگ تقریبی کارت از روی تصویر */
+    --text-color: #F2F5F9;
+    --shadow-color: #7b248a;
+}
+
+body {
+    background: linear-gradient(135deg, #672171, #7429C6); /* طبق پس‌زمینه تصویر */
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.game-container {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+}
+
+h1 {
+    font-size: 20px; /* Outfit Medium Text */
+    color: var(--light-purple);
+    margin-bottom: 20px;
+}
+
+.scrambled-word-box {
+    background-color: #4A5567; /* طبق پالت تصویر */
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 32px; /* Outfit Large Text */
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 0px 0px var(--dark-bg); /* */
+}
+
+.status-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px; /* Outfit Small Text */
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.input-group input {
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #4A5567;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    font-size: 14px; /* Outfit Button Text */
+}
+
+#random-btn {
+    background-color: var(--light-purple);
+    filter: drop-shadow(0px 4px 0px var(--shadow-color)); /* */
+}
+
+#reset-btn {
+    background-color: var(--primary-purple);
+    filter: drop-shadow(0px 4px 0px #5a1e96);
+}
+.lang-switch {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#toggle-lang {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--light-purple);
+    padding: 5px 10px;
+    font-size: 10px;
+    width: auto;
+    filter: none; /* سایه سنگین نمی‌خواد */
+}
+
+/* برای فارسی سازی فونت اگر فونت فارسی داری */
+[dir="rtl"] {
+    font-family: 'Tahoma', sans-serif; /* یا هر فونت فارسی که داری */
+}
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none; /* در حالت عادی مخفی است */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid var(--light-purple);
+    box-shadow: 0 0 20px var(--primary-purple);
+    max-width: 300px;
+    animation: popIn 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-icon { font-size: 50px; margin-bottom: 10px; }
+
+#modal-close-btn {
+    margin-top: 20px;
+    background: var(--light-purple);
+    width: 100%;
+    filter: drop-shadow(0px 4px 0px var(--shadow-color));
+}

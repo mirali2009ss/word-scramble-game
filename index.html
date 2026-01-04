@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Word - Challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Word Scramble</h1>
+        <div class="lang-switch">
+            <button id="toggle-lang">FA / EN</button>
+        </div>
+        <div class="scrambled-word-box">
+            <span id="scrambled-word">r e l o w f</span>
+        </div>
+
+        <div class="status-row">
+            <p>Tries (<span id="tries-count">0</span>/6): <span id="tries-dots"></span></p>
+            <p>Mistakes: <span id="mistakes-list"></span></p>
+        </div>
+
+        <div class="input-group" id="inputs-container">
+            </div>
+
+        <div class="button-group">
+            <button id="random-btn">Random</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+    <div id="custom-alert" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">🎉</div>
+            <h2 id="modal-title">Success!</h2>
+            <p id="modal-message">You guessed the word correctly.</p>
+            <button id="modal-close-btn">Continue</button>
+        </div>
+    </div>
+    <script src="word_pes.js"></script>
+    <script src="words.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
